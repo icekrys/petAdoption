@@ -284,7 +284,7 @@ public class Home_pages extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-        Log_in up = new Log_in();
+        logIn up = new logIn();
         homedesktop.add(up).setVisible(true);
     }//GEN-LAST:event_jLabel7MouseClicked
 
