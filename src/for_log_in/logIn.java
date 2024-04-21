@@ -10,13 +10,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
+import user.userDashboard;
 
 
 
 
 
 public class logIn extends javax.swing.JFrame {
-
     
     public logIn() {
         initComponents();
@@ -24,6 +24,9 @@ public class logIn extends javax.swing.JFrame {
     }
 
      static String status;
+     static String type;
+     static String fname;
+     static String lname;
      
     public static boolean loginAcc(String username, String password){
         dbConnector connector = new dbConnector();
@@ -32,6 +35,9 @@ public class logIn extends javax.swing.JFrame {
             ResultSet resultSet = connector.getData(query);
             if(resultSet.next()){
             status = resultSet.getString("u_status");
+            type = resultSet.getString("u_type");
+            fname = resultSet.getString("u_fname");
+            lname = resultSet.getString("u_lname");
              return true;
             }else{
                 return false;
@@ -54,16 +60,14 @@ public class logIn extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         user = new javax.swing.JTextField();
-        pass = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        pass = new javax.swing.JPasswordField();
         jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
@@ -93,15 +97,6 @@ public class logIn extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(153, 204, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel3.setLayout(null);
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-x-32.png"))); // NOI18N
-        jPanel3.add(jLabel10);
-        jLabel10.setBounds(650, 0, 32, 30);
-
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-return-arrow-24.png"))); // NOI18N
-        jPanel3.add(jLabel11);
-        jLabel11.setBounds(10, 0, 24, 30);
-
         jPanel1.add(jPanel3);
         jPanel3.setBounds(0, 0, 690, 30);
 
@@ -122,7 +117,7 @@ public class logIn extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton2);
-        jButton2.setBounds(490, 160, 70, 30);
+        jButton2.setBounds(450, 160, 70, 30);
 
         user.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,9 +125,7 @@ public class logIn extends javax.swing.JFrame {
             }
         });
         jPanel2.add(user);
-        user.setBounds(180, 60, 320, 36);
-        jPanel2.add(pass);
-        pass.setBounds(180, 110, 320, 36);
+        user.setBounds(180, 66, 190, 30);
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel2.setText("Password:");
@@ -144,9 +137,9 @@ public class logIn extends javax.swing.JFrame {
         jPanel2.add(jLabel5);
         jLabel5.setBounds(95, 70, 80, 18);
 
-        jLabel6.setText("No Account!");
+        jLabel6.setText("No Account! Register Here");
         jPanel2.add(jLabel6);
-        jLabel6.setBounds(180, 160, 80, 20);
+        jLabel6.setBounds(100, 160, 160, 30);
 
         jButton1.setText("Register");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -161,6 +154,8 @@ public class logIn extends javax.swing.JFrame {
         });
         jPanel2.add(jButton1);
         jButton1.setBounds(250, 160, 80, 30);
+        jPanel2.add(pass);
+        pass.setBounds(180, 110, 330, 30);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(40, 190, 600, 230);
@@ -168,7 +163,7 @@ public class logIn extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/77281cb6d94e94c2d71bacdba9d74d7f.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(-90, -40, 550, 530);
+        jLabel7.setBounds(-80, -40, 550, 530);
 
         jLabel9.setText("jLabel9");
         jPanel1.add(jLabel9);
@@ -204,25 +199,32 @@ public class logIn extends javax.swing.JFrame {
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
 
+        if(loginAcc(user.getText(),pass.getText())){
+            
+            if(!status.equals("Active")){
+                JOptionPane.showMessageDialog(null, "Not Active! Contact the Admin!");
+            }else{
+                if(type.equals("Admin")){
+                JOptionPane.showMessageDialog(null, "Login Success!");
+                admindashboard up = new admindashboard();
+                up.account_fname.setText(lname+","+fname);
+                up.setVisible(true);
+                this.dispose();
+                }else if(type.equals("User")){
+                JOptionPane.showMessageDialog(null, "Login Success!");
+                userDashboard up = new userDashboard();
+                up.useraccount_name.setText(""+lname);
+                up.setVisible(true);
+                this.dispose();
+                }else{
+                    JOptionPane.showMessageDialog(null, "Login Failed. Invalid Account!");
+                }
+            }
+        }
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-        if(loginAcc(user.getText(),pass.getText())){
-            
-            if(!status.equals("Active")){
-                
-                JOptionPane.showMessageDialog(null, "Not Active! Contact the Admin!");
-               
-            }else{
-                JOptionPane.showMessageDialog(null, "Login Success!");
-                admindashboard up = new admindashboard();
-                up.setVisible(true);
-                
-            }
-        }else{
-            JOptionPane.showMessageDialog(null, "Login Failed!");
-         }
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -235,8 +237,9 @@ public class logIn extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        register up = new register();
-        logindesktop.add(up).setVisible(true);
+        re_gister up = new re_gister();
+        up.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -278,8 +281,6 @@ public class logIn extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -291,7 +292,7 @@ public class logIn extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JDesktopPane logindesktop;
-    private javax.swing.JTextField pass;
+    public javax.swing.JPasswordField pass;
     private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
 }

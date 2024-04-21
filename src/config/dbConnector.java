@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -32,17 +33,33 @@ public class dbConnector {
     }
         
         //Function to save data
-        public boolean insertData(String sql){
+        public int insertData(String sql){
+            int result;
             try{
                 PreparedStatement pst = connect.prepareStatement(sql);
                 pst.executeUpdate();
                 System.out.println("Inserted Successfully!");
                 pst.close();
-               return true;
+                result =1;
             }catch(SQLException ex){
                 System.out.println("Connection Error: "+ex);
-               return false;
+                result =0;
             }
+            return result;
         }
-    
+        
+        public void updateData(String sql){
+            try{
+                PreparedStatement pst = connect.prepareStatement(sql);
+                int rowsUpdated = pst.executeUpdate();
+                if(rowsUpdated > 0){
+                    JOptionPane.showMessageDialog(null, "Data Updated Successfully");
+                }else{
+                    System.out.println("Data Update Failed ");
+                }
+            }catch(SQLException ex){
+                System.out.println("Connection Error: "+ex);
+            }
+            
+        }
 }

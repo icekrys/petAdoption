@@ -5,18 +5,12 @@
             <url>src/To_register/register.java</url>
             <bookmark id="1">
                 <name/>
-                <line>305</line>
+                <line>306</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/tonet/Documents/NetBeansProjects/final_pet_adoption/src/final_pet_adoption/Home_pages.java</file>
-            <file>file:/C:/Users/tonet/Documents/NetBeansProjects/final_pet_adoption/src/To_register4/register4.java</file>
-            <file>file:/C:/Users/tonet/Documents/NetBeansProjects/final_pet_adoption/src/for_log_in/logIn.java</file>
-            <file>file:/C:/Users/tonet/Documents/NetBeansProjects/final_pet_adoption/src/To_register/register.java</file>
-            <file>file:/C:/Users/tonet/Documents/NetBeansProjects/final_pet_adoption/src/for_log_in/admindashboard.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
