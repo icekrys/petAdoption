@@ -23,14 +23,7 @@ public class add_userform extends javax.swing.JFrame {
     public add_userform() {
         initComponents();
     }
-    public void close(){
-    this.dispose();
-    admindashboard dash = new admindashboard();
-    dash.setVisible(true);
-    internalusers up = new internalusers();
-    up.setVisible(true);
-    }
-    
+   
        public String action;
        public static String email, usname;
 
@@ -99,13 +92,11 @@ public class add_userform extends javax.swing.JFrame {
         pss = new javax.swing.JTextField();
         id = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        exit = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
+        back = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
+        background2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -214,7 +205,7 @@ public class add_userform extends javax.swing.JFrame {
         jPanel4.add(usta, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 80, -1));
         jPanel4.add(pss, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, 140, 30));
 
-        id.setEnabled(false);
+        id.setEditable(false);
         id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 idActionPerformed(evt);
@@ -229,52 +220,45 @@ public class add_userform extends javax.swing.JFrame {
         jPanel2.add(jPanel4);
         jPanel4.setBounds(100, 100, 600, 350);
 
-        jLabel1.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Exit");
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        exit.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
+        exit.setForeground(new java.awt.Color(255, 255, 255));
+        exit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exit.setText("Exit");
+        exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                exitMouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel1);
-        jLabel1.setBounds(650, 4, 30, 30);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/paw-3d-symbol-pet-paw-3d-rendering-illustration-pink-paw-print-icon-isolated-on-blue-background-dog-or-cat-paw-print-animal-track-minimalism-concept-3d-illustration-3d-render-photo.jpg"))); // NOI18N
-        jPanel2.add(jLabel4);
-        jLabel4.setBounds(100, -20, 630, 500);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/paw-3d-symbol-pet-paw-3d-rendering-illustration-pink-paw-print-icon-isolated-on-blue-background-dog-or-cat-paw-print-animal-track-minimalism-concept-3d-illustration-3d-render-photo.jpg"))); // NOI18N
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(0, 30, 620, 400);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/paw-3d-symbol-pet-paw-3d-rendering-illustration-pink-paw-print-icon-isolated-on-blue-background-dog-or-cat-paw-print-animal-track-minimalism-concept-3d-illustration-3d-render-photo.jpg"))); // NOI18N
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(0, 130, 620, 480);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/paw-3d-symbol-pet-paw-3d-rendering-illustration-pink-paw-print-icon-isolated-on-blue-background-dog-or-cat-paw-print-animal-track-minimalism-concept-3d-illustration-3d-render-photo.jpg"))); // NOI18N
-        jPanel2.add(jLabel6);
-        jLabel6.setBounds(100, 10, 610, 490);
+        jPanel2.add(exit);
+        exit.setBounds(650, 4, 30, 30);
 
         jPanel5.setBackground(new java.awt.Color(0, 51, 51));
         jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel5.setLayout(null);
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel12.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("Back");
-        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+        back.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
+        back.setForeground(new java.awt.Color(255, 255, 255));
+        back.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        back.setText("Back");
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel12MouseClicked(evt);
+                backMouseClicked(evt);
             }
         });
-        jPanel5.add(jLabel12);
-        jLabel12.setBounds(0, 0, 40, 30);
+        jPanel5.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 30));
 
         jPanel2.add(jPanel5);
         jPanel5.setBounds(0, 0, 690, 30);
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/paw-3d-symbol-pet-paw.jpg"))); // NOI18N
+        background.setText("jLabel5");
+        jPanel2.add(background);
+        background.setBounds(100, 10, 590, 440);
+
+        background2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/paw-3d-symbol-pet-paw.jpg"))); // NOI18N
+        background2.setText("jLabel5");
+        jPanel2.add(background2);
+        background2.setBounds(0, 10, 590, 440);
 
         sform.setLayer(jPanel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -307,74 +291,80 @@ public class add_userform extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void st_labelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_st_labelMouseClicked
-        dbConnector dbc = new dbConnector();
-        if(action.equals("Add")){     
-           int result = dbc.insertData("INSERT INTO tbl_user(u_fname, u_lname, u_email, u_username,"
-                   + "u_password,u_type, u_status)VALUES('"+fn.getText()+"','"+ln.getText()+"','"+em.getText()+"'"
-                           + ",'"+us.getText()+"','"+pss.getText()+"','"+up.getSelectedItem()+"'"
-                                   + ",'"+usta.getSelectedItem()+"')");
-        if(result==1){
-            JOptionPane.showMessageDialog(null, "Successfully Save");
-           close();
-        }else{
-            System.out.println("Saving Data Failed");
-        } 
-            }else if(action.equals("Update")){
-                dbc.updateData("UPDATE tbl_user SET u_fname = '"+fn.getText()+"',u_lname = '"+ln.getText()+"'"
-                        + ",u_email = '"+em.getText()+"',u_username = '"+us.getText()+"', u_password = '"
-                        +pss.getText()+"',u_type = '"+up.getSelectedItem()+"',u_status = '"
-                        +usta.getSelectedItem()+"'");
-                        close();
-        }
-    }//GEN-LAST:event_st_labelMouseClicked
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+        internalusers up = new internalusers();
+        sform.add(up).setVisible(true);
+    }//GEN-LAST:event_backMouseClicked
 
-    private void st_labelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_st_labelActionPerformed
-      if(fn.getText().isEmpty()||em.getText().isEmpty()||us.getText().isEmpty()||pss.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null,"All fields are required");
-        }else if(pss.getText().length() < 8){
+    private void exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseClicked
+        admindashboard up = new admindashboard();
+        sform.setVisible(true);
+    }//GEN-LAST:event_exitMouseClicked
 
-            JOptionPane.showMessageDialog(null,"Maximum 8 characters");
-            pss.setText("");
-        }  
-    }//GEN-LAST:event_st_labelActionPerformed
-
-    private void usActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usActionPerformed
+    private void idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_usActionPerformed
-
-    private void emActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emActionPerformed
-
-    private void fnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fnActionPerformed
-
-    private void upActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_upActionPerformed
+    }//GEN-LAST:event_idActionPerformed
 
     private void ustaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ustaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ustaActionPerformed
 
+    private void upActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_upActionPerformed
+
+    private void fnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fnActionPerformed
+
     private void cnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cnActionPerformed
 
-    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
-        internalusers up = new internalusers();
-        sform.add(up).setVisible(true);
-    }//GEN-LAST:event_jLabel12MouseClicked
-
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        close();
-    }//GEN-LAST:event_jLabel1MouseClicked
-
-    private void idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idActionPerformed
+    private void emActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_idActionPerformed
+    }//GEN-LAST:event_emActionPerformed
+
+    private void usActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usActionPerformed
+
+    private void st_labelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_st_labelActionPerformed
+    dbConnector dbc = new dbConnector();
+        if(action.equals("Add")){
+            int result = dbc.insertData("INSERT INTO tbl_user(u_fname, u_lname, u_email, u_username,"
+                + "u_password,u_type, u_status)VALUES('"+fn.getText()+"','"+ln.getText()+"','"+em.getText()+"'"
+                + ",'"+us.getText()+"','"+pss.getText()+"','"+up.getSelectedItem()+"'"
+                + ",'"+usta.getSelectedItem()+"'");
+                   
+            if(result==1){
+                JOptionPane.showMessageDialog(null, "Successfully Save");
+                admindashboard up = new admindashboard();
+                sform.setVisible(true);
+            }else{
+                System.out.println("Saving Data Failed");
+            }
+        }else if(action.equals("Update")){
+            dbc.updateData("UPDATE tbl_user SET u_fname = '"+fn.getText()+"',u_lname = '"+ln.getText()+"'"
+                + ",u_email = '"+em.getText()+"',u_username = '"+us.getText()+"', u_password = '"
+                +pss.getText()+"',u_type = '"+up.getSelectedItem()+"',u_status = '"
+                +usta.getSelectedItem()+"'"
+                +"WHERE u_id = '"+id.getText()+"'");
+             internalusers up = new internalusers();
+             sform.add(up).setVisible(true);       
+        }
+        if(fn.getText().isEmpty()||em.getText().isEmpty()||us.getText().isEmpty()||pss.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null,"All fields are required");
+        }else if(pss.getText().length() < 8){
+
+            JOptionPane.showMessageDialog(null,"Maximum 8 characters");
+            pss.setText("");
+        }
+    }//GEN-LAST:event_st_labelActionPerformed
+
+    private void st_labelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_st_labelMouseClicked
+      
+    }//GEN-LAST:event_st_labelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -412,20 +402,18 @@ public class add_userform extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel back;
+    private javax.swing.JLabel background;
+    private javax.swing.JLabel background2;
     public javax.swing.JTextField cn;
     public javax.swing.JTextField em;
+    private javax.swing.JLabel exit;
     public javax.swing.JTextField fn;
     public javax.swing.JTextField id;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

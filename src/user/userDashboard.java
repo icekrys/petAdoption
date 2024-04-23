@@ -5,7 +5,10 @@
  */
 package user;
 
+import config.Session;
 import for_log_in.logIn;
+import internalpages.internalusers;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -30,33 +33,53 @@ public class userDashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        useraccount_name = new javax.swing.JLabel();
+        maindesktopuser = new javax.swing.JDesktopPane();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        useraccount_name = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         jPanel1.setLayout(null);
 
-        jPanel3.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel3.setLayout(null);
-        jPanel1.add(jPanel3);
-        jPanel3.setBounds(0, 0, 690, 30);
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        useraccount_name.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
-        useraccount_name.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        useraccount_name.setText("User");
-        jPanel1.add(useraccount_name);
-        useraccount_name.setBounds(40, 160, 70, 22);
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
+            }
+        });
+        jPanel4.setLayout(null);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-team-94.png"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(30, 80, 100, 90);
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        jPanel4.add(jLabel1);
+        jLabel1.setBounds(0, 0, 90, 80);
+
+        jLabel3.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Account");
+        jPanel4.add(jLabel3);
+        jLabel3.setBounds(0, 80, 90, 20);
+
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, 90, 110));
 
         jLabel8.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -69,20 +92,38 @@ public class userDashboard extends javax.swing.JFrame {
                 jLabel8MouseExited(evt);
             }
         });
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(610, 390, 70, 22);
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 70, 30));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/paw-3d-symbol-pet-paw-3d-rendering-illustration-pink-paw-print-icon-isolated-on-blue-background-dog-or-cat-paw-print-animal-track-minimalism-concept-3d-illustration-3d-render-photo.jpg"))); // NOI18N
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(100, -20, 620, 490);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-user-100.png"))); // NOI18N
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 90));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/paw-3d-symbol-pet-paw-3d-rendering-illustration-pink-paw-print-icon-isolated-on-blue-background-dog-or-cat-paw-print-animal-track-minimalism-concept-3d-illustration-3d-render-photo.jpg"))); // NOI18N
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(0, 0, 620, 440);
+        useraccount_name.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
+        useraccount_name.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        useraccount_name.setText("User");
+        useraccount_name.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                useraccount_nameMouseClicked(evt);
+            }
+        });
+        jPanel2.add(useraccount_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 80, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/paw-3d-symbol-pet-paw-3d-rendering-illustration-pink-paw-print-icon-isolated-on-blue-background-dog-or-cat-paw-print-animal-track-minimalism-concept-3d-illustration-3d-render-photo.jpg"))); // NOI18N
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(90, -20, 610, 490);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/paw-3d-symbol-pet-paw.jpg"))); // NOI18N
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/paw-3d-symbol-pet-paw.jpg"))); // NOI18N
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        maindesktopuser.add(jPanel2);
+        jPanel2.setBounds(0, 20, 690, 400);
+
+        jPanel3.setBackground(new java.awt.Color(0, 51, 51));
+        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel3.setLayout(null);
+        maindesktopuser.add(jPanel3);
+        jPanel3.setBounds(0, 0, 690, 20);
+
+        jPanel1.add(maindesktopuser);
+        maindesktopuser.setBounds(0, 0, 690, 420);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -108,6 +149,35 @@ public class userDashboard extends javax.swing.JFrame {
     private void jLabel8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseExited
 
     }//GEN-LAST:event_jLabel8MouseExited
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+         
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void useraccount_nameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_useraccount_nameMouseClicked
+        
+      
+    }//GEN-LAST:event_useraccount_nameMouseClicked
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+         Session sess = Session.getinstance();
+        
+        if(sess.getUid() == 0)
+        {
+            JOptionPane.showMessageDialog(null, "No account, Please Login!");
+            logIn up = new logIn();
+            up.setVisible(true);
+            this.dispose();
+        }else{
+            useraccount_name.setText(""+sess.getFname());
+        }
+    }//GEN-LAST:event_formWindowActivated
+
+    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+        accountDetails up = new accountDetails();
+        up.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jPanel4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -148,10 +218,14 @@ public class userDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JDesktopPane maindesktopuser;
     public javax.swing.JLabel useraccount_name;
     // End of variables declaration//GEN-END:variables
 }
