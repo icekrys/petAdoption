@@ -43,25 +43,25 @@ public class changepass extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         maindesktopuser = new javax.swing.JDesktopPane();
         jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        iddisplay = new javax.swing.JLabel();
         first_name = new javax.swing.JLabel();
-        last_name = new javax.swing.JLabel();
         user_name = new javax.swing.JLabel();
-        enpass = new javax.swing.JTextField();
         tppass = new javax.swing.JTextField();
-        conpass = new javax.swing.JTextField();
-        jPanel4 = new javax.swing.JPanel();
-        acc_ln = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         acc_ln1 = new javax.swing.JLabel();
         acc_fn = new javax.swing.JLabel();
-        bakcground2 = new javax.swing.JLabel();
-        background1 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        enpass = new javax.swing.JTextField();
+        last_name = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        acc_ln = new javax.swing.JLabel();
+        conpass = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        iddisplay = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
@@ -70,84 +70,28 @@ public class changepass extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel3.setLayout(null);
-
-        jLabel2.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Change Password");
-        jPanel3.add(jLabel2);
-        jLabel2.setBounds(0, 0, 140, 20);
-
-        iddisplay.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        iddisplay.setForeground(new java.awt.Color(255, 255, 255));
-        iddisplay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        iddisplay.setText("UID");
-        jPanel3.add(iddisplay);
-        iddisplay.setBounds(140, 0, 90, 20);
-
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 20));
-
         first_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        first_name.setForeground(new java.awt.Color(153, 153, 153));
         first_name.setText("Type Old Pass:");
         jPanel2.add(first_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, -1, -1));
 
-        last_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
-        last_name.setText("Enter New Password:");
-        jPanel2.add(last_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, -1, -1));
-
         user_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        user_name.setForeground(new java.awt.Color(153, 153, 153));
         user_name.setText("Confirm Password:");
         jPanel2.add(user_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
-
-        enpass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enpassActionPerformed(evt);
-            }
-        });
-        jPanel2.add(enpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, 140, 30));
 
         tppass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tppassActionPerformed(evt);
             }
         });
-        jPanel2.add(tppass, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 130, 30));
-
-        conpass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                conpassActionPerformed(evt);
-            }
-        });
-        jPanel2.add(conpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 130, 30));
-
-        jPanel4.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel4MouseClicked(evt);
-            }
-        });
-        jPanel4.setLayout(null);
-
-        acc_ln.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
-        acc_ln.setForeground(new java.awt.Color(255, 255, 255));
-        acc_ln.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        acc_ln.setText("User");
-        acc_ln.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                acc_lnMouseClicked(evt);
-            }
-        });
-        jPanel4.add(acc_ln);
-        acc_ln.setBounds(20, 0, 50, 30);
-
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 280, 90, 30));
+        jPanel2.add(tppass, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 190, 30));
 
         jLabel8.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(164, 87, 14));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("LogOut");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -158,7 +102,7 @@ public class changepass extends javax.swing.JFrame {
                 jLabel8MouseExited(evt);
             }
         });
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(619, 372, 70, 30));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 390, 70, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-team-94.png"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -166,7 +110,7 @@ public class changepass extends javax.swing.JFrame {
                 jLabel1MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 100, 90));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 100, 90));
 
         acc_ln1.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         acc_ln1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -176,7 +120,7 @@ public class changepass extends javax.swing.JFrame {
                 acc_ln1MouseClicked(evt);
             }
         });
-        jPanel2.add(acc_ln1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 70, -1));
+        jPanel2.add(acc_ln1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 70, -1));
 
         acc_fn.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         acc_fn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -186,18 +130,76 @@ public class changepass extends javax.swing.JFrame {
                 acc_fnMouseClicked(evt);
             }
         });
-        jPanel2.add(acc_fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 70, -1));
+        jPanel2.add(acc_fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 70, -1));
 
-        bakcground2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/paw-3d-symbol-pet-paw.jpg"))); // NOI18N
-        bakcground2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bakcground2MouseClicked(evt);
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanel5.setLayout(null);
+
+        enpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enpassActionPerformed(evt);
             }
         });
-        jPanel2.add(bakcground2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, -1, -1));
+        jPanel5.add(enpass);
+        enpass.setBounds(229, 32, 170, 30);
 
-        background1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/paw-3d-symbol-pet-paw.jpg"))); // NOI18N
-        jPanel2.add(background1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, -1, -1));
+        last_name.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        last_name.setForeground(new java.awt.Color(153, 153, 153));
+        last_name.setText("Enter New Password:");
+        jPanel5.add(last_name);
+        last_name.setBounds(230, 10, 128, 18);
+
+        jPanel4.setBackground(new java.awt.Color(164, 87, 14));
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
+            }
+        });
+        jPanel4.setLayout(new java.awt.BorderLayout());
+
+        acc_ln.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
+        acc_ln.setForeground(new java.awt.Color(255, 255, 255));
+        acc_ln.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acc_ln.setText("User");
+        acc_ln.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                acc_lnMouseClicked(evt);
+            }
+        });
+        jPanel4.add(acc_ln, java.awt.BorderLayout.CENTER);
+
+        jPanel5.add(jPanel4);
+        jPanel4.setBounds(300, 100, 90, 30);
+
+        conpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                conpassActionPerformed(evt);
+            }
+        });
+        jPanel5.add(conpass);
+        conpass.setBounds(10, 100, 190, 30);
+
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 410, 190));
+
+        jLabel2.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel2.setText("Change Password");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 140, 20));
+
+        iddisplay.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
+        iddisplay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        iddisplay.setText("UID");
+        jPanel2.add(iddisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 90, 20));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Back");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 20));
 
         maindesktopuser.add(jPanel2);
         jPanel2.setBounds(0, 0, 690, 420);
@@ -235,7 +237,43 @@ public class changepass extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void acc_lnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_acc_lnMouseClicked
-        
+        if(tppass.getText().isEmpty() || enpass.getText().isEmpty() || conpass.getText().isEmpty()){
+            System.out.println("Empty Text Field!");
+            JOptionPane.showMessageDialog(null, "All fields are required!");
+
+        }else if(enpass.getText().length() < 8){
+            System.out.println("Password Invalid!");
+            JOptionPane.showMessageDialog(null, "Password character should be 8 above!");
+            enpass.setText("");
+            conpass.setText("");
+
+        }else{
+            try{
+                dbConnector dbc = new dbConnector();
+                Session sess = Session.getinstance();
+                String query = "SELECT * FROM tbl_user WHERE u_id = '"+sess.getUid()+"' ";
+                ResultSet resultSet = dbc.getData(query);
+                if(resultSet.next()){
+                    String oldpass = resultSet.getString("u_password");
+                    String oldhash = passwordHasher.hashPassword(tppass.getText());
+                    
+                    if(oldpass.equals(oldhash)){
+                        if(enpass.getText().equals(conpass.getText())){
+                            String newpass = passwordHasher.hashPassword(enpass.getText());
+                            dbc.updateData("UPDATE tbl_user SET u_password = '"+newpass+"' WHERE u_id = '"+iddisplay.getText()+"'");
+                             userDashboard up = new userDashboard();
+                            up.setVisible(true);
+                            this.dispose();
+                        }else{
+                            JOptionPane.showMessageDialog(null, "New Password and Confirm Password doesn't match!");
+                        }
+                    }else{
+                        JOptionPane.showMessageDialog(null, "Incorrect Old Password!");
+                    }
+                 }       
+             }catch(SQLException  | NoSuchAlgorithmException ex){
+            }
+        }   
       
     }//GEN-LAST:event_acc_lnMouseClicked
 
@@ -267,39 +305,15 @@ public class changepass extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_acc_ln1MouseClicked
 
-    private void bakcground2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bakcground2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bakcground2MouseClicked
-
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
-        try
-        {
-            dbConnector dbc = new dbConnector();
-            Session sess = Session.getinstance();
-            
-            String query = "SELECT * FROM tbl_user WHERE u_id = '"+sess.getUid()+"'";
-                   ResultSet rs = dbc.getData(query);
-                   if(rs.next())
-                   {
-                       String olddbpass = rs.getString("u_password");
-                       String oldhash = passwordHasher.hashPassword(tppass.getText());
-                       
-                       if(olddbpass.equals(oldhash)){
-                           String npass = passwordHasher.hashPassword(enpass.getText());
-                           dbc.updateData("UPDATE tbl_user SET u_password = '"+npass+"' WHERE u_id = '"+sess.getUid()+"'");
-                           JOptionPane.showMessageDialog(null,"Successfully Updated");
-                           logIn ig = new logIn();
-                           ig.setVisible(true);
-                           this.dispose();
-                       }else{
-                           JOptionPane.showMessageDialog(null,"Old Password is Incorrect");
-                       }
-                   }
-            
-        }catch(SQLException | NoSuchAlgorithmException ex){
-            System.out.println(""+ex);
-        }
+         
     }//GEN-LAST:event_jPanel4MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        accountDetails up = new accountDetails();
+        up.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -343,19 +357,18 @@ public class changepass extends javax.swing.JFrame {
     public javax.swing.JLabel acc_fn;
     public javax.swing.JLabel acc_ln;
     public javax.swing.JLabel acc_ln1;
-    private javax.swing.JLabel background1;
-    private javax.swing.JLabel bakcground2;
     public javax.swing.JTextField conpass;
     public javax.swing.JTextField enpass;
     private javax.swing.JLabel first_name;
     private javax.swing.JLabel iddisplay;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JLabel last_name;
     private javax.swing.JDesktopPane maindesktopuser;

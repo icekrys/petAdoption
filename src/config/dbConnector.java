@@ -24,6 +24,7 @@ public class dbConnector {
                 System.out.println("Can't connect to database: "+ex.getMessage());
         }
     }
+    
 
    //Function to retrieve data
         public ResultSet getData(String sql) throws SQLException{
@@ -60,6 +61,16 @@ public class dbConnector {
             }catch(SQLException ex){
                 System.out.println("Connection Error: "+ex);
             }
-            
+        }
+             public boolean deleteData(String sql) {
+        try {
+            PreparedStatement pst = connect.prepareStatement(sql);
+            int rowsDeleted = pst.executeUpdate();
+            pst.close();
+            return rowsDeleted > 0;
+        } catch(SQLException ex) {
+            System.out.println("Connection Error: " + ex);
+            return false;
+         }
         }
 }

@@ -71,7 +71,6 @@ public class add_userform extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         sform = new javax.swing.JDesktopPane();
         jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         st_label = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
@@ -92,25 +91,18 @@ public class add_userform extends javax.swing.JFrame {
         pss = new javax.swing.JTextField();
         id = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        exit = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
         back = new javax.swing.JLabel();
-        background = new javax.swing.JLabel();
-        background2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
-        jPanel3.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel3.setLayout(null);
-        jPanel2.add(jPanel3);
-        jPanel3.setBounds(100, 80, 590, 20);
-
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         st_label.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -128,6 +120,7 @@ public class add_userform extends javax.swing.JFrame {
         jPanel4.add(st_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 90, 30));
 
         jLabel7.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(153, 153, 153));
         jLabel7.setText("Password:");
         jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 70, 20));
 
@@ -136,18 +129,21 @@ public class add_userform extends javax.swing.JFrame {
                 usActionPerformed(evt);
             }
         });
-        jPanel4.add(us, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, 130, 30));
+        jPanel4.add(us, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, 140, 30));
 
         jLabel8.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(153, 153, 153));
         jLabel8.setText("Username:");
-        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 50, 80, 20));
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 50, 90, 20));
         jPanel4.add(ln, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, 130, 30));
 
         jLabel9.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(153, 153, 153));
         jLabel9.setText("Last Name:");
-        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, 70, 20));
+        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, 80, 30));
 
         jLabel11.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(153, 153, 153));
         jLabel11.setText("Email:");
         jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 50, 20));
 
@@ -166,6 +162,7 @@ public class add_userform extends javax.swing.JFrame {
         jPanel4.add(cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 140, 30));
 
         jLabel14.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(153, 153, 153));
         jLabel14.setText("Contact Number:");
         jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 110, -1));
 
@@ -177,10 +174,12 @@ public class add_userform extends javax.swing.JFrame {
         jPanel4.add(fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 140, 30));
 
         jLabel15.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(153, 153, 153));
         jLabel15.setText("First Name:");
-        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 90, -1));
+        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 100, -1));
 
         type.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        type.setForeground(new java.awt.Color(153, 153, 153));
         type.setText("Account Type");
         jPanel4.add(type, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 90, -1));
 
@@ -193,6 +192,7 @@ public class add_userform extends javax.swing.JFrame {
         jPanel4.add(up, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 80, -1));
 
         type1.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        type1.setForeground(new java.awt.Color(153, 153, 153));
         type1.setText("Account Status");
         jPanel4.add(type1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 100, -1));
 
@@ -214,51 +214,24 @@ public class add_userform extends javax.swing.JFrame {
         jPanel4.add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 140, 30));
 
         jLabel16.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(153, 153, 153));
         jLabel16.setText("User ID:");
-        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 90, -1));
+        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 100, -1));
 
         jPanel2.add(jPanel4);
-        jPanel4.setBounds(100, 100, 600, 350);
+        jPanel4.setBounds(40, 50, 600, 310);
 
-        exit.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        exit.setForeground(new java.awt.Color(255, 255, 255));
-        exit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        exit.setText("Exit");
-        exit.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                exitMouseClicked(evt);
-            }
-        });
-        jPanel2.add(exit);
-        exit.setBounds(650, 4, 30, 30);
-
-        jPanel5.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        back.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        back.setForeground(new java.awt.Color(255, 255, 255));
+        back.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         back.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         back.setText("Back");
+        back.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 backMouseClicked(evt);
             }
         });
-        jPanel5.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 30));
-
-        jPanel2.add(jPanel5);
-        jPanel5.setBounds(0, 0, 690, 30);
-
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/paw-3d-symbol-pet-paw.jpg"))); // NOI18N
-        background.setText("jLabel5");
-        jPanel2.add(background);
-        background.setBounds(100, 10, 590, 440);
-
-        background2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/paw-3d-symbol-pet-paw.jpg"))); // NOI18N
-        background2.setText("jLabel5");
-        jPanel2.add(background2);
-        background2.setBounds(0, 10, 590, 440);
+        jPanel2.add(back);
+        back.setBounds(0, 0, 40, 30);
 
         sform.setLayer(jPanel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -284,7 +257,7 @@ public class add_userform extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
         );
 
         pack();
@@ -295,11 +268,6 @@ public class add_userform extends javax.swing.JFrame {
         internalusers up = new internalusers();
         sform.add(up).setVisible(true);
     }//GEN-LAST:event_backMouseClicked
-
-    private void exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseClicked
-        admindashboard up = new admindashboard();
-        sform.setVisible(true);
-    }//GEN-LAST:event_exitMouseClicked
 
     private void idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idActionPerformed
         // TODO add your handling code here:
@@ -332,15 +300,12 @@ public class add_userform extends javax.swing.JFrame {
     private void st_labelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_st_labelActionPerformed
     dbConnector dbc = new dbConnector();
         if(action.equals("Add")){
-            int result = dbc.insertData("INSERT INTO tbl_user(u_fname, u_lname, u_email, u_username,"
-                + "u_password,u_type, u_status)VALUES('"+fn.getText()+"','"+ln.getText()+"','"+em.getText()+"'"
-                + ",'"+us.getText()+"','"+pss.getText()+"','"+up.getSelectedItem()+"'"
-                + ",'"+usta.getSelectedItem()+"'");
-                   
+            int result = dbc.insertData("INSERT INTO tbl_user(u_fname, u_lname, u_email, u_username,u_password,u_type, "
+                    + "u_status)VALUES('"+fn.getText()+"','"+ln.getText()+"','"+em.getText()+"','"+us.getText()+"','"+pss.getText()+"','"+up.getSelectedItem()+"','"+usta.getSelectedItem()+"')");
             if(result==1){
                 JOptionPane.showMessageDialog(null, "Successfully Save");
-                admindashboard up = new admindashboard();
-                sform.setVisible(true);
+                internalusers up = new internalusers();
+                sform.add(up).setVisible(true);
             }else{
                 System.out.println("Saving Data Failed");
             }
@@ -403,11 +368,8 @@ public class add_userform extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel back;
-    private javax.swing.JLabel background;
-    private javax.swing.JLabel background2;
     public javax.swing.JTextField cn;
     public javax.swing.JTextField em;
-    private javax.swing.JLabel exit;
     public javax.swing.JTextField fn;
     public javax.swing.JTextField id;
     private javax.swing.JLabel jLabel11;
@@ -419,9 +381,7 @@ public class add_userform extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     public javax.swing.JTextField ln;
     public javax.swing.JTextField pss;
     private javax.swing.JDesktopPane sform;
