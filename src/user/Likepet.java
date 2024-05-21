@@ -36,11 +36,8 @@ public class Likepet extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        Exit = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
         scrolling = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
@@ -60,10 +57,12 @@ public class Likepet extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jPanel24 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        Exit = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -108,10 +107,6 @@ public class Likepet extends javax.swing.JFrame {
         jLabel2.setText("Dislikes");
         jPanel13.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        jLabel3.setText("Behavior");
-        jPanel13.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
-
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
         jLabel4.setText(" Formal Foster Parent");
         jPanel13.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
@@ -119,24 +114,6 @@ public class Likepet extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
         jLabel5.setText("Likes ");
         jPanel13.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, -1, -1));
-
-        jLabel6.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Back");
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
-            }
-        });
-        jPanel13.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 20));
-
-        Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-exit-24 (2).png"))); // NOI18N
-        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ExitMouseClicked(evt);
-            }
-        });
-        jPanel13.add(Exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, -6, -1, 30));
 
         jLabel36.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -212,42 +189,55 @@ public class Likepet extends javax.swing.JFrame {
 
         scrolling.setViewportView(jPanel1);
 
-        jPanel13.add(scrolling, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 210, 370));
+        jPanel13.add(scrolling, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 180, 370));
 
         jPanel24.setBackground(new java.awt.Color(255, 255, 255));
         jPanel24.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
         jPanel24.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(189, 227, 255));
-        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
-        jPanel2.setLayout(new java.awt.BorderLayout());
-
-        jLabel1.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-dog-house-32.png"))); // NOI18N
-        jLabel1.setText("Adopt Pet");
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
-            }
-        });
-        jPanel2.add(jLabel1, java.awt.BorderLayout.PAGE_START);
-
-        jPanel24.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, 100, 30));
-
-        jPanel3.setBackground(new java.awt.Color(189, 227, 255));
-        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
-        jPanel3.setLayout(new java.awt.BorderLayout());
-
         jLabel21.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-heart-with-dog-paw-32.png"))); // NOI18N
-        jLabel21.setText("Adopt");
-        jPanel3.add(jLabel21, java.awt.BorderLayout.PAGE_START);
+        jLabel21.setText(" Favorites");
+        jPanel24.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, -1, -1));
 
-        jPanel24.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, 100, 30));
+        jLabel3.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
+        jLabel3.setText("Behavior");
+        jPanel24.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 60, -1));
 
         jPanel13.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 500, 370));
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel2.setLayout(null);
+
+        jLabel22.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-forward-button-20.png"))); // NOI18N
+        jPanel2.add(jLabel22);
+        jLabel22.setBounds(40, 0, 20, 20);
+
+        jLabel23.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-back-arrow-20.png"))); // NOI18N
+        jLabel23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel23MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel23);
+        jLabel23.setBounds(0, 0, 20, 20);
+
+        Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-exit-24 (2).png"))); // NOI18N
+        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ExitMouseClicked(evt);
+            }
+        });
+        jPanel2.add(Exit);
+        Exit.setBounds(680, 0, 24, 20);
+
+        jPanel13.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -272,17 +262,11 @@ public class Likepet extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_ExitMouseClicked
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void jLabel23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel23MouseClicked
         pets up = new pets();
         up.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jLabel6MouseClicked
-
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-       adoptinfo up = new adoptinfo();
-       up.setVisible(true);
-       this.dispose();
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_jLabel23MouseClicked
 
     /**
      * @param args the command line arguments
@@ -321,7 +305,6 @@ public class Likepet extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Exit;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -334,6 +317,8 @@ public class Likepet extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel35;
@@ -341,7 +326,6 @@ public class Likepet extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -355,7 +339,6 @@ public class Likepet extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane scrolling;
     // End of variables declaration//GEN-END:variables
 }

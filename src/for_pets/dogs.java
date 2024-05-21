@@ -5,6 +5,7 @@
  */
 package for_pets;
 
+import for_log_in.addpet;
 import for_log_in.adminpets;
 
 /**
@@ -68,6 +69,7 @@ public class dogs extends javax.swing.JFrame {
         jPanel23 = new javax.swing.JPanel();
         Exit = new javax.swing.JLabel();
         Back = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -156,7 +158,7 @@ public class dogs extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jPanel2);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(0, 30, 660, 200);
+        jScrollPane1.setBounds(0, 60, 660, 190);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -219,7 +221,7 @@ public class dogs extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jPanel3);
 
         jPanel1.add(jScrollPane2);
-        jScrollPane2.setBounds(0, 240, 660, 200);
+        jScrollPane2.setBounds(0, 260, 660, 180);
 
         Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-exit-24 (2).png"))); // NOI18N
         Exit.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -240,6 +242,17 @@ public class dogs extends javax.swing.JFrame {
         });
         jPanel1.add(Back);
         Back.setBounds(0, 0, 40, 15);
+
+        jLabel13.setFont(new java.awt.Font("Candara", 1, 12)); // NOI18N
+        jLabel13.setText("ADD");
+        jLabel13.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel13MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(20, 30, 30, 21);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -265,6 +278,12 @@ public class dogs extends javax.swing.JFrame {
         up.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_BackMouseClicked
+
+    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
+        addpet ig = new addpet();
+        ig.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel13MouseClicked
 
     /**
      * @param args the command line arguments
@@ -308,6 +327,7 @@ public class dogs extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

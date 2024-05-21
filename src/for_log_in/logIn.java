@@ -31,7 +31,7 @@ public class logIn extends javax.swing.JFrame {
     }
     
     Color navColor = new Color(255,255,255);
-    Color clickColor = new Color(164,87,14);
+    Color clickColor = new Color(118,199,234);
     static String status;
     static String type;
     
@@ -83,9 +83,6 @@ public class logIn extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         FurHome = new javax.swing.JLabel();
-        Account = new javax.swing.JLabel();
-        Exit = new javax.swing.JLabel();
-        Back = new javax.swing.JLabel();
         FurHome1 = new javax.swing.JLabel();
         SecondPanel = new javax.swing.JPanel();
         user = new javax.swing.JTextField();
@@ -93,11 +90,13 @@ public class logIn extends javax.swing.JFrame {
         login = new javax.swing.JLabel();
         forgotPassword = new javax.swing.JLabel();
         Register = new javax.swing.JLabel();
-        Dont_have_an_account = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         pass = new javax.swing.JPasswordField();
-        background = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        Exit1 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -114,42 +113,17 @@ public class logIn extends javax.swing.JFrame {
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
-        FurHome.setFont(new java.awt.Font("Pristina", 1, 80)); // NOI18N
+        FurHome.setFont(new java.awt.Font("Pristina", 1, 90)); // NOI18N
+        FurHome.setForeground(new java.awt.Color(255, 208, 144));
         FurHome.setText("Home");
         jPanel2.add(FurHome);
-        FurHome.setBounds(200, 50, 200, 90);
-
-        Account.setFont(new java.awt.Font("Pristina", 1, 60)); // NOI18N
-        Account.setForeground(new java.awt.Color(255, 255, 255));
-        Account.setText("Account");
-        jPanel2.add(Account);
-        Account.setBounds(370, 50, 200, 90);
-
-        Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-exit-24 (2).png"))); // NOI18N
-        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ExitMouseClicked(evt);
-            }
-        });
-        jPanel2.add(Exit);
-        Exit.setBounds(640, -4, 30, 24);
-
-        Back.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        Back.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Back.setText("Back");
-        Back.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BackMouseClicked(evt);
-            }
-        });
-        jPanel2.add(Back);
-        Back.setBounds(0, 0, 40, 20);
+        FurHome.setBounds(150, 50, 200, 90);
 
         FurHome1.setBackground(new java.awt.Color(255, 255, 255));
         FurHome1.setFont(new java.awt.Font("Pristina", 1, 80)); // NOI18N
         FurHome1.setText("Fur  ");
         jPanel2.add(FurHome1);
-        FurHome1.setBounds(90, 50, 160, 90);
+        FurHome1.setBounds(40, 50, 160, 90);
 
         SecondPanel.setBackground(new java.awt.Color(255, 255, 255));
         SecondPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -176,7 +150,7 @@ public class logIn extends javax.swing.JFrame {
             }
         });
         SecondPanel.add(user);
-        user.setBounds(20, 40, 330, 30);
+        user.setBounds(60, 40, 450, 30);
         user.getAccessibleContext().setAccessibleName("");
 
         LoginButton.setBackground(new java.awt.Color(255, 255, 255));
@@ -194,17 +168,28 @@ public class logIn extends javax.swing.JFrame {
         });
         LoginButton.setLayout(null);
 
-        login.setFont(new java.awt.Font("Candara", 0, 18)); // NOI18N
+        login.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
         login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         login.setText("Log In");
+        login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                loginMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                loginMouseExited(evt);
+            }
+        });
         LoginButton.add(login);
         login.setBounds(20, 0, 130, 30);
 
         SecondPanel.add(LoginButton);
-        LoginButton.setBounds(100, 140, 170, 30);
+        LoginButton.setBounds(200, 140, 170, 30);
 
         forgotPassword.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        forgotPassword.setForeground(new java.awt.Color(164, 87, 14));
+        forgotPassword.setForeground(new java.awt.Color(118, 199, 234));
         forgotPassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         forgotPassword.setText("Forgot Password");
         forgotPassword.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -213,10 +198,10 @@ public class logIn extends javax.swing.JFrame {
             }
         });
         SecondPanel.add(forgotPassword);
-        forgotPassword.setBounds(10, 200, 120, 20);
+        forgotPassword.setBounds(60, 190, 120, 20);
 
-        Register.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        Register.setForeground(new java.awt.Color(164, 87, 14));
+        Register.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
+        Register.setForeground(new java.awt.Color(118, 199, 234));
         Register.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Register.setText("Register");
         Register.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -225,35 +210,57 @@ public class logIn extends javax.swing.JFrame {
             }
         });
         SecondPanel.add(Register);
-        Register.setBounds(290, 200, 70, 18);
-
-        Dont_have_an_account.setFont(new java.awt.Font("Candara", 2, 12)); // NOI18N
-        Dont_have_an_account.setText("Don't have an account?");
-        SecondPanel.add(Dont_have_an_account);
-        Dont_have_an_account.setBounds(180, 200, 120, 20);
+        Register.setBounds(440, 190, 70, 20);
 
         jLabel1.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 204, 204));
         jLabel1.setText("username");
         SecondPanel.add(jLabel1);
-        jLabel1.setBounds(20, 20, 60, 20);
+        jLabel1.setBounds(60, 20, 60, 20);
 
         jLabel2.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(204, 204, 204));
         jLabel2.setText("password");
         SecondPanel.add(jLabel2);
-        jLabel2.setBounds(20, 70, 70, 20);
+        jLabel2.setBounds(60, 70, 70, 20);
         SecondPanel.add(pass);
-        pass.setBounds(20, 90, 330, 30);
+        pass.setBounds(60, 90, 450, 30);
 
         jPanel2.add(SecondPanel);
-        SecondPanel.setBounds(280, 140, 370, 230);
+        SecondPanel.setBounds(40, 140, 580, 230);
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dog_background1_1.jpg"))); // NOI18N
-        background.setText("jLabel1");
-        background.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel2.add(background);
-        background.setBounds(-60, -10, 770, 440);
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel1.setLayout(null);
+
+        Exit1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-exit-24 (2).png"))); // NOI18N
+        Exit1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Exit1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(Exit1);
+        Exit1.setBounds(640, 0, 24, 20);
+
+        jLabel18.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-forward-button-20.png"))); // NOI18N
+        jPanel1.add(jLabel18);
+        jLabel18.setBounds(30, 0, 20, 20);
+
+        jLabel19.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-back-arrow-20.png"))); // NOI18N
+        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel19MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel19);
+        jLabel19.setBounds(0, 0, 20, 20);
+
+        jPanel2.add(jPanel1);
+        jPanel1.setBounds(0, 0, 660, 20);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -263,7 +270,7 @@ public class logIn extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
         );
 
         pack();
@@ -326,16 +333,6 @@ public class logIn extends javax.swing.JFrame {
         this.requestFocusInWindow();
     }//GEN-LAST:event_formWindowGainedFocus
 
-    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
-        dispose();
-    }//GEN-LAST:event_ExitMouseClicked
-
-    private void BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseClicked
-       homedashboard up = new homedashboard();
-       up.setVisible(true);
-       this.dispose();
-    }//GEN-LAST:event_BackMouseClicked
-
     private void LoginButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseEntered
         LoginButton.setBackground(clickColor);
     }//GEN-LAST:event_LoginButtonMouseEntered
@@ -343,6 +340,50 @@ public class logIn extends javax.swing.JFrame {
     private void LoginButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseExited
         LoginButton.setBackground(navColor);
     }//GEN-LAST:event_LoginButtonMouseExited
+
+    private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
+      if(loginAcc(user.getText(),pass.getText())){
+            if(!status.equals("Active")){
+                JOptionPane.showMessageDialog(null, "Not Active! Contact the Admin!");
+            }else{
+                if(type.equals("Admin"))
+                {
+                JOptionPane.showMessageDialog(null, "Login Success!");
+                JOptionPane.showMessageDialog(null, "Welcome Back Admin!!!");
+                admindashboard up = new admindashboard();
+                up.setVisible(true);
+                this.dispose();
+                }else if(type.equals("User")){
+                JOptionPane.showMessageDialog(null, "Login Success!");
+                userDashboard up = new userDashboard();
+                up.setVisible(true);
+                this.dispose();
+                }else{
+                    JOptionPane.showMessageDialog(null, "No Account Type Found!");
+                }
+            }
+                }else{
+                    JOptionPane.showMessageDialog(null, "Login Failed. Invalid Account!");
+          }
+    }//GEN-LAST:event_loginMouseClicked
+
+    private void Exit1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Exit1MouseClicked
+        dispose();
+    }//GEN-LAST:event_Exit1MouseClicked
+
+    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+        homedashboard up = new homedashboard();
+        up.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel19MouseClicked
+
+    private void loginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseEntered
+        LoginButton.setBackground(clickColor);
+    }//GEN-LAST:event_loginMouseEntered
+
+    private void loginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseExited
+        LoginButton.setBackground(navColor);
+    }//GEN-LAST:event_loginMouseExited
 
     /**
      * @param args the command line arguments
@@ -380,19 +421,18 @@ public class logIn extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Account;
-    private javax.swing.JLabel Back;
-    private javax.swing.JLabel Dont_have_an_account;
-    private javax.swing.JLabel Exit;
+    private javax.swing.JLabel Exit1;
     private javax.swing.JLabel FurHome;
     private javax.swing.JLabel FurHome1;
     private javax.swing.JPanel LoginButton;
     private javax.swing.JLabel Register;
     private javax.swing.JPanel SecondPanel;
-    private javax.swing.JLabel background;
     private javax.swing.JLabel forgotPassword;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel login;
     public javax.swing.JPasswordField pass;

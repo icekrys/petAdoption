@@ -29,10 +29,6 @@ public class pets extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
@@ -43,8 +39,8 @@ public class pets extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel33 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jPanel16 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
@@ -55,8 +51,6 @@ public class pets extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -67,8 +61,6 @@ public class pets extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
@@ -77,37 +69,15 @@ public class pets extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
         Exit = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
-
-        jPanel2.setBackground(new java.awt.Color(255, 191, 131));
-        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
-        jPanel2.setLayout(new java.awt.BorderLayout());
-
-        jLabel1.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Status");
-        jPanel2.add(jLabel1, java.awt.BorderLayout.CENTER);
-
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(590, 30, 100, 20);
-
-        jPanel3.setBackground(new java.awt.Color(255, 191, 131));
-        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
-        jPanel3.setLayout(new java.awt.BorderLayout());
-
-        jLabel2.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Pets");
-        jPanel3.add(jLabel2, java.awt.BorderLayout.CENTER);
-
-        jPanel1.add(jPanel3);
-        jPanel3.setBounds(10, 20, 570, 20);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -122,9 +92,9 @@ public class pets extends javax.swing.JFrame {
 
         jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cat_1.png"))); // NOI18N
         jLabel29.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel14.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 0, 130, 100));
+        jPanel14.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 130, 100));
 
-        jPanel4.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 100, 100));
+        jPanel4.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 100));
 
         jLabel8.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -158,20 +128,19 @@ public class pets extends javax.swing.JFrame {
         jLabel37.setText("female");
         jPanel4.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, -1, -1));
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel2.setLayout(new java.awt.BorderLayout());
+
+        jLabel33.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel33.setText("Available");
+        jPanel2.add(jLabel33, java.awt.BorderLayout.CENTER);
+
+        jPanel4.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, 60, 30));
+
         jPanel1.add(jPanel4);
-        jPanel4.setBounds(10, 50, 570, 100);
-
-        jPanel5.setBackground(new java.awt.Color(255, 191, 131));
-        jPanel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
-        jPanel5.setLayout(new java.awt.BorderLayout());
-
-        jLabel3.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Available");
-        jPanel5.add(jLabel3, java.awt.BorderLayout.CENTER);
-
-        jPanel1.add(jPanel5);
-        jPanel5.setBounds(590, 90, 100, 20);
+        jPanel4.setBounds(10, 20, 670, 100);
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -187,9 +156,9 @@ public class pets extends javax.swing.JFrame {
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/3c12985fa7345871ea3e7d44bdad069f.jpg"))); // NOI18N
         jLabel17.setText("jLabel5");
         jLabel17.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel16.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -10, 130, 130));
+        jPanel16.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 130, 130));
 
-        jPanel6.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 100, 100));
+        jPanel6.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 100));
 
         jLabel12.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -224,19 +193,7 @@ public class pets extends javax.swing.JFrame {
         jPanel6.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, -1));
 
         jPanel1.add(jPanel6);
-        jPanel6.setBounds(10, 160, 570, 100);
-
-        jPanel7.setBackground(new java.awt.Color(255, 191, 131));
-        jPanel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
-        jPanel7.setLayout(new java.awt.BorderLayout());
-
-        jLabel5.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Not Available");
-        jPanel7.add(jLabel5, java.awt.BorderLayout.CENTER);
-
-        jPanel1.add(jPanel7);
-        jPanel7.setBounds(590, 200, 100, 20);
+        jPanel6.setBounds(10, 140, 670, 100);
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
         jPanel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -251,9 +208,9 @@ public class pets extends javax.swing.JFrame {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconfordogs/pomeranian_2.png"))); // NOI18N
         jLabel7.setText("jLabel3");
-        jPanel17.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 140, 110));
+        jPanel17.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 110));
 
-        jPanel8.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 100, 100));
+        jPanel8.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 100));
 
         jLabel16.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -288,19 +245,7 @@ public class pets extends javax.swing.JFrame {
         jPanel8.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, -1, -1));
 
         jPanel1.add(jPanel8);
-        jPanel8.setBounds(10, 270, 570, 100);
-
-        jPanel9.setBackground(new java.awt.Color(255, 191, 131));
-        jPanel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
-        jPanel9.setLayout(new java.awt.BorderLayout());
-
-        jLabel6.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Available");
-        jPanel9.add(jLabel6, java.awt.BorderLayout.CENTER);
-
-        jPanel1.add(jPanel9);
-        jPanel9.setBounds(590, 310, 100, 20);
+        jPanel8.setBounds(10, 260, 670, 100);
 
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
         jPanel11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
@@ -310,9 +255,9 @@ public class pets extends javax.swing.JFrame {
 
         jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cat_1.png"))); // NOI18N
         jLabel36.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel18.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 0, 130, 100));
+        jPanel18.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 130, 100));
 
-        jPanel11.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 100, 20));
+        jPanel11.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 20));
 
         jLabel21.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -339,18 +284,11 @@ public class pets extends javax.swing.JFrame {
         jPanel11.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, -1, -1));
 
         jPanel1.add(jPanel11);
-        jPanel11.setBounds(10, 380, 570, 84);
+        jPanel11.setBounds(10, 380, 670, 84);
 
-        jLabel4.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Back");
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
-            }
-        });
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(0, 0, 40, 20);
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel3.setLayout(null);
 
         Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-exit-24 (2).png"))); // NOI18N
         Exit.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -358,8 +296,28 @@ public class pets extends javax.swing.JFrame {
                 ExitMouseClicked(evt);
             }
         });
-        jPanel1.add(Exit);
-        Exit.setBounds(674, 0, 30, 10);
+        jPanel3.add(Exit);
+        Exit.setBounds(676, 0, 24, 20);
+
+        jLabel35.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-forward-button-20.png"))); // NOI18N
+        jPanel3.add(jLabel35);
+        jLabel35.setBounds(40, 0, 20, 20);
+
+        jLabel39.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-back-arrow-20.png"))); // NOI18N
+        jLabel39.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel39MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jLabel39);
+        jLabel39.setBounds(0, 0, 30, 20);
+
+        jPanel1.add(jPanel3);
+        jPanel3.setBounds(-4, 0, 710, 20);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -369,22 +327,12 @@ public class pets extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 395, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        userDashboard up = new userDashboard();
-        up.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jLabel4MouseClicked
-
-    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
-        dispose();
-    }//GEN-LAST:event_ExitMouseClicked
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
         Likepet up = new Likepet();
@@ -403,6 +351,16 @@ public class pets extends javax.swing.JFrame {
         up.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jPanel8MouseClicked
+
+    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
+        dispose();
+    }//GEN-LAST:event_ExitMouseClicked
+
+    private void jLabel39MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel39MouseClicked
+        userDashboard up = new userDashboard();
+        up.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel39MouseClicked
 
     /**
      * @param args the command line arguments
@@ -441,7 +399,6 @@ public class pets extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Exit;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -452,7 +409,6 @@ public class pets extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -463,17 +419,16 @@ public class pets extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -486,10 +441,7 @@ public class pets extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     // End of variables declaration//GEN-END:variables
 }

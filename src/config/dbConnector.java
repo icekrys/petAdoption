@@ -73,4 +73,15 @@ public class dbConnector {
             return false;
          }
         }
+              public boolean archiveData(String sql) {
+        try {
+            PreparedStatement pst = connect.prepareStatement(sql);
+            int rowsUpdated = pst.executeUpdate();
+            pst.close();
+            return rowsUpdated > 0;
+        } catch(SQLException ex) {
+            System.out.println("Connection Error: " + ex);
+            return false;
+        }
+    }
 }

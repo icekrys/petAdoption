@@ -56,6 +56,10 @@ public class accountDetails extends javax.swing.JFrame {
         changepass = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        Exit = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -131,7 +135,7 @@ public class accountDetails extends javax.swing.JFrame {
                 jLabel1MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 90));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 100, 90));
 
         acc_ln.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         acc_ln.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -141,7 +145,7 @@ public class accountDetails extends javax.swing.JFrame {
                 acc_lnMouseClicked(evt);
             }
         });
-        jPanel2.add(acc_ln, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 70, -1));
+        jPanel2.add(acc_ln, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 70, -1));
 
         acc_fn.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         acc_fn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -151,7 +155,7 @@ public class accountDetails extends javax.swing.JFrame {
                 acc_fnMouseClicked(evt);
             }
         });
-        jPanel2.add(acc_fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 70, -1));
+        jPanel2.add(acc_fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 70, -1));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -160,32 +164,32 @@ public class accountDetails extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 408, Short.MAX_VALUE)
+            .addGap(0, 438, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 178, Short.MAX_VALUE)
         );
 
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 410, 180));
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 440, 180));
 
         iddisplay.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         iddisplay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         iddisplay.setText("UID");
-        jPanel2.add(iddisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 90, 20));
+        jPanel2.add(iddisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 90, 20));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("ACCOUNT INFORMATION");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 310, 30));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 310, 30));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new java.awt.BorderLayout());
 
-        changepass.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        changepass.setForeground(new java.awt.Color(164, 87, 14));
+        changepass.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        changepass.setForeground(new java.awt.Color(0, 0, 255));
         changepass.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        changepass.setText("Change Pass");
+        changepass.setText("Change Password");
         changepass.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 changepassMouseClicked(evt);
@@ -193,13 +197,13 @@ public class accountDetails extends javax.swing.JFrame {
         });
         jPanel3.add(changepass, java.awt.BorderLayout.CENTER);
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 80, 20));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 100, 20));
 
         jPanel5.setLayout(new java.awt.BorderLayout());
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(164, 87, 14));
+        jLabel8.setForeground(new java.awt.Color(0, 0, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("LogOut");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -213,6 +217,38 @@ public class accountDetails extends javax.swing.JFrame {
         jPanel5.add(jLabel8, java.awt.BorderLayout.CENTER);
 
         jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 390, 70, 20));
+
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel6.setLayout(null);
+
+        Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-exit-24 (2).png"))); // NOI18N
+        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ExitMouseClicked(evt);
+            }
+        });
+        jPanel6.add(Exit);
+        Exit.setBounds(670, 0, 24, 20);
+
+        jLabel18.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-forward-button-20.png"))); // NOI18N
+        jPanel6.add(jLabel18);
+        jLabel18.setBounds(30, 0, 20, 20);
+
+        jLabel19.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-back-arrow-20.png"))); // NOI18N
+        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel19MouseClicked(evt);
+            }
+        });
+        jPanel6.add(jLabel19);
+        jLabel19.setBounds(0, 0, 20, 20);
+
+        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 20));
 
         maindesktopuser.add(jPanel2);
         jPanel2.setBounds(0, 0, 690, 420);
@@ -293,6 +329,16 @@ public class accountDetails extends javax.swing.JFrame {
         
     }//GEN-LAST:event_changepassMouseClicked
 
+    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
+        dispose();
+    }//GEN-LAST:event_ExitMouseClicked
+
+    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+        userDashboard up = new userDashboard();
+        up.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel19MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -330,6 +376,7 @@ public class accountDetails extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Exit;
     public javax.swing.JLabel acc_fn;
     public javax.swing.JLabel acc_ln;
     private javax.swing.JLabel changepass;
@@ -339,6 +386,8 @@ public class accountDetails extends javax.swing.JFrame {
     public javax.swing.JTextField fn;
     private javax.swing.JLabel iddisplay;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
@@ -346,6 +395,7 @@ public class accountDetails extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JLabel last_name;
     public javax.swing.JTextField ln;

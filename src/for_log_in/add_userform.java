@@ -91,7 +91,10 @@ public class add_userform extends javax.swing.JFrame {
         pss = new javax.swing.JTextField();
         id = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        back = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        Exit = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -219,19 +222,40 @@ public class add_userform extends javax.swing.JFrame {
         jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 100, -1));
 
         jPanel2.add(jPanel4);
-        jPanel4.setBounds(40, 50, 600, 310);
+        jPanel4.setBounds(40, 70, 600, 310);
 
-        back.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        back.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        back.setText("Back");
-        back.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        back.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel5.setLayout(null);
+
+        Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-exit-24 (2).png"))); // NOI18N
+        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backMouseClicked(evt);
+                ExitMouseClicked(evt);
             }
         });
-        jPanel2.add(back);
-        back.setBounds(0, 0, 40, 30);
+        jPanel5.add(Exit);
+        Exit.setBounds(646, 0, 24, 20);
+
+        jLabel18.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-forward-button-20.png"))); // NOI18N
+        jPanel5.add(jLabel18);
+        jLabel18.setBounds(30, 0, 20, 20);
+
+        jLabel19.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-back-arrow-20.png"))); // NOI18N
+        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel19MouseClicked(evt);
+            }
+        });
+        jPanel5.add(jLabel19);
+        jLabel19.setBounds(0, 0, 20, 20);
+
+        jPanel2.add(jPanel5);
+        jPanel5.setBounds(-1, 0, 670, 20);
 
         sform.setLayer(jPanel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -239,7 +263,7 @@ public class add_userform extends javax.swing.JFrame {
         sform.setLayout(sformLayout);
         sformLayout.setHorizontalGroup(
             sformLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 689, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)
         );
         sformLayout.setVerticalGroup(
             sformLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -247,13 +271,13 @@ public class add_userform extends javax.swing.JFrame {
         );
 
         jPanel1.add(sform);
-        sform.setBounds(0, 0, 689, 454);
+        sform.setBounds(0, 0, 670, 454);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 684, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 666, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,11 +287,6 @@ public class add_userform extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
-        internalusers up = new internalusers();
-        sform.add(up).setVisible(true);
-    }//GEN-LAST:event_backMouseClicked
 
     private void idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idActionPerformed
         // TODO add your handling code here:
@@ -331,6 +350,16 @@ public class add_userform extends javax.swing.JFrame {
       
     }//GEN-LAST:event_st_labelMouseClicked
 
+    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
+        dispose();
+    }//GEN-LAST:event_ExitMouseClicked
+
+    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+        internalusers up = new internalusers();
+        up.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel19MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -367,7 +396,7 @@ public class add_userform extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel back;
+    private javax.swing.JLabel Exit;
     public javax.swing.JTextField cn;
     public javax.swing.JTextField em;
     public javax.swing.JTextField fn;
@@ -376,12 +405,15 @@ public class add_userform extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     public javax.swing.JTextField ln;
     public javax.swing.JTextField pss;
     private javax.swing.JDesktopPane sform;

@@ -31,7 +31,6 @@ public class adminpets extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        Exit = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel15 = new javax.swing.JPanel();
         jPanel16 = new javax.swing.JPanel();
@@ -96,9 +95,13 @@ public class adminpets extends javax.swing.JFrame {
         jPanel49 = new javax.swing.JPanel();
         birdtxt2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        Back = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        Exit = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
@@ -109,17 +112,9 @@ public class adminpets extends javax.swing.JFrame {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(570, 30, 0, 150);
 
-        Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-exit-24 (2).png"))); // NOI18N
-        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ExitMouseClicked(evt);
-            }
-        });
-        jPanel1.add(Exit);
-        Exit.setBounds(640, 0, 20, 10);
-
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jPanel15.setBackground(new java.awt.Color(255, 255, 255));
         jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel16.setBackground(new java.awt.Color(255, 255, 255));
@@ -257,11 +252,11 @@ public class adminpets extends javax.swing.JFrame {
 
         birdtxt4.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         birdtxt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        birdtxt4.setText("Birds");
+        birdtxt4.setText("Rabbits");
         jPanel30.add(birdtxt4, java.awt.BorderLayout.CENTER);
 
         jPanel29.add(jPanel30);
-        jPanel30.setBounds(40, 110, 50, 20);
+        jPanel30.setBounds(40, 110, 53, 20);
 
         jPanel28.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 140));
 
@@ -459,24 +454,46 @@ public class adminpets extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jPanel15);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(0, 20, 660, 390);
+        jScrollPane1.setBounds(10, 40, 650, 350);
 
         jLabel1.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Pets");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(300, 0, 70, 22);
+        jLabel1.setBounds(0, 20, 70, 22);
 
-        Back.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        Back.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Back.setText("Back");
-        Back.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel4.setLayout(null);
+
+        Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-exit-24 (2).png"))); // NOI18N
+        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BackMouseClicked(evt);
+                ExitMouseClicked(evt);
             }
         });
-        jPanel1.add(Back);
-        Back.setBounds(0, 0, 40, 15);
+        jPanel4.add(Exit);
+        Exit.setBounds(640, 0, 24, 20);
+
+        jLabel18.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-forward-button-20.png"))); // NOI18N
+        jPanel4.add(jLabel18);
+        jLabel18.setBounds(30, 0, 20, 20);
+
+        jLabel19.setFont(new java.awt.Font("Candara", 0, 12)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-back-arrow-20.png"))); // NOI18N
+        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel19MouseClicked(evt);
+            }
+        });
+        jPanel4.add(jLabel19);
+        jLabel19.setBounds(0, 0, 20, 20);
+
+        jPanel1.add(jPanel4);
+        jPanel4.setBounds(-1, 0, 660, 20);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -493,21 +510,21 @@ public class adminpets extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
-        dispose();
-    }//GEN-LAST:event_ExitMouseClicked
-
-    private void BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseClicked
-        homedashboard up = new homedashboard();
-        up.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_BackMouseClicked
-
     private void jPanel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel16MouseClicked
        dogs up = new dogs();
        up.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_jPanel16MouseClicked
+
+    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
+        dispose();
+    }//GEN-LAST:event_ExitMouseClicked
+
+    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+        admindashboard up = new admindashboard();
+        up.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel19MouseClicked
 
     /**
      * @param args the command line arguments
@@ -545,7 +562,6 @@ public class adminpets extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Back;
     private javax.swing.JLabel Exit;
     private javax.swing.JLabel birdtxt1;
     private javax.swing.JLabel birdtxt2;
@@ -564,6 +580,8 @@ public class adminpets extends javax.swing.JFrame {
     private javax.swing.JLabel dogtxt2;
     private javax.swing.JLabel dogtxt3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -602,6 +620,7 @@ public class adminpets extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel37;
     private javax.swing.JPanel jPanel38;
     private javax.swing.JPanel jPanel39;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel40;
     private javax.swing.JPanel jPanel41;
     private javax.swing.JPanel jPanel42;

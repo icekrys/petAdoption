@@ -93,7 +93,6 @@ public class re_gister extends javax.swing.JFrame {
         pss = new javax.swing.JPasswordField();
         registerbutton = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -120,7 +119,7 @@ public class re_gister extends javax.swing.JFrame {
         type.setBounds(90, 320, 70, 40);
 
         jLabel1.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(211, 128, 50));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Return to Login");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -132,7 +131,7 @@ public class re_gister extends javax.swing.JFrame {
         jLabel1.setBounds(540, 0, 110, 30);
 
         jLabel7.setFont(new java.awt.Font("Pristina", 1, 90)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(164, 87, 14));
+        jLabel7.setForeground(new java.awt.Color(255, 208, 144));
         jLabel7.setText("Account");
         jPanel2.add(jLabel7);
         jLabel7.setBounds(330, 30, 320, 110);
@@ -230,7 +229,7 @@ public class re_gister extends javax.swing.JFrame {
         jPanel1.add(pss);
         pss.setBounds(300, 150, 210, 30);
 
-        registerbutton.setBackground(new java.awt.Color(211, 128, 50));
+        registerbutton.setBackground(new java.awt.Color(118, 199, 234));
         registerbutton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 153), 1, true));
         registerbutton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -250,17 +249,6 @@ public class re_gister extends javax.swing.JFrame {
 
         jPanel2.add(jPanel1);
         jPanel1.setBounds(50, 130, 550, 250);
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Back");
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
-            }
-        });
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(0, 0, 40, 20);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -338,12 +326,6 @@ public class re_gister extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_lnActionPerformed
 
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-        homedashboard up = new homedashboard();
-        up.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jLabel3MouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -388,7 +370,6 @@ public class re_gister extends javax.swing.JFrame {
     public javax.swing.JTextField fn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
